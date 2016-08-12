@@ -27,8 +27,13 @@ function Song(title, artist) {
 
 
 // This is how we should be able to use your constructor functions once they work!
+var metallica = new Artist ('Metallica')
+var one = new Song ('One', metallica)
 var vanHalen = new Artist("Van Halen");
 var jump = new Song("Jump!", vanHalen);
+var panama = new Song("Panama", vanHalen);
+
 
 // console.log(vanHalen.name);
 console.log(vanHalen);
+console.log(metallica);
