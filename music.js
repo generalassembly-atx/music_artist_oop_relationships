@@ -13,17 +13,18 @@ function Song(title, artist) {
   this.title = title;
   this.artist = artist;
   this.playCount = 0;
+  this.artist.songs.push(this);
+};
 
-  // When a new song is instantiated, you'll want to add that song to its artist's 'songs' array.
-  // You'll probably want to do that in here somewhere...
-
-    Artist.prototype.newSong = function(title) {
-      this.songs.push(title);
-    }
-  artist.newSong(title);
+Song.prototype.play = function () {
+  this.playCount++
 };
 
 // This is how we should be able to use your constructor functions once they work!
 var vanHalen = new Artist("Van Halen");
+console.log(vanHalen.songs);
 var jump = new Song("Jump!", vanHalen);
-console.log(jump)
+console.log(vanHalen.songs);
+console.log(jump.playCount)
+jump.play()
+console.log(jump.playCount);
