@@ -20,7 +20,7 @@
    this.playCount++;
    console.log(this.playCount);
   }
-
+ 
   // This is how we should be able to use your constructor functions once they work!
   var vanHalen = new Artist("Van Halen");
   var jump = new Song("Jump!", vanHalen);
